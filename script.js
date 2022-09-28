@@ -5,6 +5,7 @@ const clearGrid = document.querySelector("#clear-grid");
 const gridChanger = document.querySelector("#grid-changer");
 const spanElement = document.querySelector("span");
 const removeGridLines = document.querySelector("#remove-lines");
+const rainbowButton = document.querySelector("#rainbow");
 
 function removeAllChildren() {
     divHolder.innerHTML = "";
@@ -63,6 +64,6 @@ colorChanger.addEventListener("input", function() {
     spanElement.style.backgroundColor = colorChanger.value;
 })
 
-// add a option for grid lines or not
-// Start grid as white
+
+
 window.onload = createSquare(16);
