@@ -6,6 +6,7 @@ const gridChanger = document.querySelector("#grid-changer");
 const spanElement = document.querySelector("span");
 const removeGridLines = document.querySelector("#remove-lines");
 const rainbowButton = document.querySelector("#rainbow");
+var rainbowMode = false;
 
 function removeAllChildren() {
     divHolder.innerHTML = "";
@@ -42,10 +43,20 @@ removeGridLines.addEventListener("click", function() {
 
 
 // Coloring
+function randomColor() {
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    return `rgb(${red}, ${green}, ${blue})`;
+
+}
+
 divHolder.addEventListener("mouseover", function(e) {
     var color = colorChanger.value;
-    if (e.target.classList.contains("grid-object")) {
+    if (e.target.classList.contains("grid-object") && rainbowMode === false) {
         e.target.style.backgroundColor = color;
+    } else if (e.target.classList.contains("grid-object") && rainbowMode === true) {
+        e.target.style.backgroundColor = randomColor();
     }
 })
 
@@ -64,6 +75,12 @@ colorChanger.addEventListener("input", function() {
     spanElement.style.backgroundColor = colorChanger.value;
 })
 
-
+rainbowButton.addEventListener("click", function() {
+    if (rainbowMode === false) {
+        rainbowMode = true;
+    } else {
+        rainbowMode = false;
+    }
+})
 
 window.onload = createSquare(16);
