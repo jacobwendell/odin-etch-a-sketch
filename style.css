@@ -1,9 +1,13 @@
 body {
     margin: 0;
+    background-color: rgb(209, 209, 209);
 }
 
 h1 {
     text-align: center;
+    font-family: 'Rubik Dirt', cursive;
+    color: gray;
+    text-shadow: 2px 2px black;
 }
 
 .big-container {
@@ -17,7 +21,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 
 }
 
@@ -30,6 +34,52 @@ h1 {
     min-width: 600px;
     max-width: 600px;
     display: grid;
+}
+
+h2 {
+    margin-bottom: -12px;
+    font-family: 'Rubik Dirt', cursive;
+    color: grey;
+    text-shadow: 2px 2px black;
+}
+
+#color-changer {
+    width: 120px;
+    height: 65px;
+    background: none;
+    border: 3px solid rgb(228, 227, 227);
+    border-radius: 10px;
+}
+
+#eraser {
+    width: 120px;
+    height: 50px;
+    border: 3px solid rgb(228, 227, 227);
+    border-radius: 10px;
+    font-family: "Rubik Dirt", cursive;
+    color: rgb(73, 73, 73);
+    text-shadow: 1px 1px white;
+    font-size: 1.3rem;
+}
+
+#clear-grid {
+    width: 120px;
+    height: 50px;
+    border: 3px solid rgb(228, 227, 227);
+    border-radius: 10px;
+    font-family: "Rubik Dirt", cursive;
+    color: rgb(73, 73, 73);
+    font-size: 1.2rem;
+}
+
+#remove-lines {
+    width: 120px;
+    height: 50px;
+    border: 3px solid rgb(228, 227, 227);
+    border-radius: 10px;
+    font-family: "Rubik Dirt", cursive;
+    color: rgb(73, 73, 73);
+    font-size: 1.1rem;
 }
 
 .square {
