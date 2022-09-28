@@ -1,5 +1,27 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.big-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+}
+
 #grid-holder {
-    margin: 0 auto;
     border: 2px solid red;
     height: 600px;
     min-height: 600px;
@@ -12,8 +34,6 @@
 
 .square {
     border: 1px solid black;
-    /* 16 size 10 padding needed */
-    /* 64 needs 2 padding */
 }
 
 .colored-in {

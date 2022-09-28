@@ -1,5 +1,7 @@
 const divHolder = document.querySelector("#grid-holder");
 const gridChanger = document.querySelector("#grid-changer");
+const colorChanger = document.querySelector("#color-changer");
+const eraser = document.querySelector("#eraser");
 
 function removeAllChildren() {
     divHolder.innerHTML = "";
@@ -18,10 +20,8 @@ function createSquare(value) {
     }
 }
 
-// Initial Grid Created
-
 gridChanger.addEventListener("click", function() {
-    var gridValue = Number(prompt("How big would you like the Grid too be? 16x16, 32x32, 64x64"));
+    var gridValue = Number(prompt("How big would you like the Grid too be? 1-100"));
     if (gridValue > 100) {
         alert("Too High, Changed to 100");
         gridValue = 100;
@@ -31,9 +31,14 @@ gridChanger.addEventListener("click", function() {
 
 // Coloring
 divHolder.addEventListener("mouseover", function(e) {
+    var color = colorChanger.value;
     if (e.target.classList.contains("square")) {
-        e.target.classList.add("colored-in");
+        e.target.style.backgroundColor = color;
     }
+})
+
+eraser.addEventListener("click", function() {
+    colorChanger.value = "#ffffff";
 })
 
 // TO DO 
