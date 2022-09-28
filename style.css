@@ -1,0 +1,22 @@
+#grid-holder {
+    margin: 0 auto;
+    border: 2px solid red;
+    height: 600px;
+    min-height: 600px;
+    max-height: 600px;
+    width: 600px;
+    min-width: 600px;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.square {
+    border: 1px solid black;
+    /* 16 size 10 padding needed */
+    /* 64 needs 2 padding */
+}
+
+.colored-in {
+    background-color: pink;
+}
