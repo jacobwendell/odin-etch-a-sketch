@@ -56,7 +56,8 @@ divHolder.addEventListener("mouseover", function(e) {
     if (e.target.classList.contains("grid-object") && rainbowMode === false) {
         e.target.style.backgroundColor = color;
     } else if (e.target.classList.contains("grid-object") && rainbowMode === true) {
-        e.target.style.backgroundColor = randomColor();
+        var newColor = randomColor();
+        e.target.style.backgroundColor = newColor;
     }
 })
 

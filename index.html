@@ -12,25 +12,30 @@
 </head>
 <body>
     <h1>Etch-A-Sketch</h1>
-    <div class="big-container">
-        <div class="button-container">
-            <h2>Pick a Color</h2>
-            <input type="color" id="color-changer">
-            <button id="rainbow">Rainbow</button>
-            <button id="eraser">Eraser</button>
-            <button id="clear-grid">Clear Grid</button>
-            <button id="remove-lines">Toggle Grid Lines</button>
-            <h3>Change the Grid Size</h3>
-            <div class="range-button">
-                <div class="ranges">
-                    <h5>1</h5>
-                    <h5>100</h5>
+    <div class="bigger-container">
+        <div class="big-container">
+            <div class="button-container">
+                <h2>Pick a Color</h2>
+                <input type="color" id="color-changer">
+                <button id="rainbow">Rainbow</button>
+                <button id="eraser">Eraser</button>
+                <button id="clear-grid">Clear Grid</button>
+                <button id="remove-lines">Toggle Grid Lines</button>
+                <h3>Change the Grid Size</h3>
+                <div class="range-button">
+                    <div class="ranges">
+                        <h5>1</h5>
+                        <h5>100</h5>
+                    </div>
+                    <input id="grid-changer" type="range" min="0" max="100" value="16">
                 </div>
-                <input id="grid-changer" type="range" min="0" max="100" value="16">
+            </div>
+            <div id="grid-holder">
             </div>
         </div>
-        <div id="grid-holder">
-        </div>
+        <footer>
+            <div class="footer-text"><a href="https://github.com/jacobwendell/odin-etch-a-sketch">Jacob Wendell</a> @ The Odin Project 2022</div>
+        </footer>
     </div>
     </body>
     <script type="text/javascript" src="script.js"></script>

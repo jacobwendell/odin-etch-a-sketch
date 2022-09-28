@@ -26,7 +26,7 @@ h1 {
 }
 
 #grid-holder {
-    border: 2px solid red;
+    border: 3px solid red;
     height: 600px;
     min-height: 600px;
     max-height: 600px;
@@ -151,4 +151,24 @@ input[type=range]:hover {
 
 input[type=range] {
     accent-color: rgb(34, 34, 34);
+}
+
+.bigger-container {
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: 30px;
+    padding-bottom: 2px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 1.7rem;
+}
+
+footer a {
+    color: black;
 }
