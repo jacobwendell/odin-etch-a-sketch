@@ -1,8 +1,8 @@
 const divHolder = document.querySelector("#grid-holder");
-const gridChanger = document.querySelector("#grid-changer");
 const colorChanger = document.querySelector("#color-changer");
 const eraser = document.querySelector("#eraser");
 const clearGrid = document.querySelector("#clear-grid");
+const gridChanger = document.querySelector("#grid-changer");
 
 function removeAllChildren() {
     divHolder.innerHTML = "";
@@ -21,14 +21,13 @@ function createSquare(value) {
     }
 }
 
-gridChanger.addEventListener("click", function() {
-    var gridValue = Number(prompt("How big would you like the Grid too be? 1-100"));
-    if (gridValue > 100) {
-        alert("Too High, Changed to 100");
-        gridValue = 100;
-    }
+// Changing Grid Size via input
+gridChanger.addEventListener("input", function() {
+    var gridValue = gridChanger.value;
+    removeAllChildren();
     createSquare(gridValue);
 })
+
 
 // Coloring
 divHolder.addEventListener("mouseover", function(e) {
@@ -49,5 +48,5 @@ clearGrid.addEventListener("click", function() {
     })
 })
 
-// TO DO 
-// Make Buttons for Erasing, Changing Color, etc
+
+window.onload = createSquare(16);
