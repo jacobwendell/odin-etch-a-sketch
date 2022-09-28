@@ -2,6 +2,7 @@ const divHolder = document.querySelector("#grid-holder");
 const gridChanger = document.querySelector("#grid-changer");
 const colorChanger = document.querySelector("#color-changer");
 const eraser = document.querySelector("#eraser");
+const clearGrid = document.querySelector("#clear-grid");
 
 function removeAllChildren() {
     divHolder.innerHTML = "";
@@ -39,6 +40,13 @@ divHolder.addEventListener("mouseover", function(e) {
 
 eraser.addEventListener("click", function() {
     colorChanger.value = "#ffffff";
+})
+
+clearGrid.addEventListener("click", function() {
+    var children = document.querySelectorAll(".square");
+    children.forEach(element => {   
+        element.style.backgroundColor = "#ffffff";
+    })
 })
 
 // TO DO 
