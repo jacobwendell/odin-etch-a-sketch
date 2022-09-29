@@ -8,6 +8,10 @@ const rainbowButton = document.querySelector("#rainbow");
 var rainbowMode = false;
 var eraserOn = false;
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function removeAllChildren() {
     divHolder.innerHTML = "";
 }
@@ -83,6 +87,7 @@ clearGrid.addEventListener("click", function() {
     children.forEach(element => {   
         element.style.backgroundColor = "#ffffff";
     })
+
 })
 
 function borderColorChange() {
