@@ -68,10 +68,12 @@ h2 {
     color: rgb(73, 73, 73);
     text-shadow: 1px 1px white;
     font-size: 1.3rem;
+    transition: transform .3s;
 }
 
 #rainbow:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 #eraser {
@@ -83,9 +85,11 @@ h2 {
     color: rgb(73, 73, 73);
     text-shadow: 1px 1px white;
     font-size: 1.3rem;
+    transition: transform .3s;
 }
 
 #eraser:hover {
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -97,9 +101,11 @@ h2 {
     font-family: "Rubik Dirt", cursive;
     color: rgb(73, 73, 73);
     font-size: 1.2rem;
+    transition: transform .3s;
 }
 
 #clear-grid:hover {
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -111,9 +117,11 @@ h2 {
     font-family: "Rubik Dirt", cursive;
     color: rgb(73, 73, 73);
     font-size: 1.1rem;
+    transition: transform .3s;
 }
 
 #remove-lines:hover {
+    transform: scale (1.1);
     cursor: pointer;
 }
 
@@ -151,9 +159,11 @@ h5 {
 
 input[type=range]:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 input[type=range] {
+    transition: transform .3s;
     accent-color: rgb(34, 34, 34);
 }
 
@@ -175,4 +185,8 @@ footer {
 
 footer a {
     color: black;
+}
+
+.activated {
+    border: 3px solid rgb(184, 115, 51);
 }

@@ -6,6 +6,7 @@ const gridChanger = document.querySelector("#grid-changer");
 const removeGridLines = document.querySelector("#remove-lines");
 const rainbowButton = document.querySelector("#rainbow");
 var rainbowMode = false;
+var eraserOn = false;
 
 function removeAllChildren() {
     divHolder.innerHTML = "";
@@ -62,6 +63,19 @@ divHolder.addEventListener("mouseover", function(e) {
 
 eraser.addEventListener("click", function() {
     colorChanger.value = "#ffffff";
+    borderColorChange();
+    if (eraserOn === false) {
+        eraser.style.borderColor = "rgb(184, 115, 51)";
+        eraserOn = true;
+    } else {
+        eraser.style.borderColor = "rgb(228, 227, 227)";
+        colorChanger.value = randomColor();
+        eraserOn = false;
+    }
+    if (rainbowMode === true) {
+        rainbowMode = false;
+        rainbowButton.style.borderColor = "rgb(228, 227, 227)";
+    }
 })
 
 clearGrid.addEventListener("click", function() {
@@ -75,13 +89,22 @@ function borderColorChange() {
     colorChanger.style.borderColor = colorChanger.value;
 }
 
-colorChanger.addEventListener("input", borderColorChange);
+colorChanger.addEventListener("input", function() {
+    borderColorChange();
+    eraser.style.borderColor = "rgb(228, 227, 227)";
+    rainbowButton.style.borderColor = "rgb(228, 227, 227)";
+    rainbowMode = false;
+});
 
 rainbowButton.addEventListener("click", function() {
+    eraser.style.borderColor = "rgb(228, 227, 227)";
     if (rainbowMode === false) {
+        eraserOn = false;
         rainbowMode = true;
+        rainbowButton.style.borderColor = "rgb(184, 115, 51)";
     } else {
         rainbowMode = false;
+        rainbowButton.style.borderColor = "rgb(228, 227, 227)";
     }
 })
 
