@@ -3,7 +3,6 @@ const colorChanger = document.querySelector("#color-changer");
 const eraser = document.querySelector("#eraser");
 const clearGrid = document.querySelector("#clear-grid");
 const gridChanger = document.querySelector("#grid-changer");
-const spanElement = document.querySelector("span");
 const removeGridLines = document.querySelector("#remove-lines");
 const rainbowButton = document.querySelector("#rainbow");
 var rainbowMode = false;
