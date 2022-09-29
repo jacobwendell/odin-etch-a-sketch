@@ -72,9 +72,11 @@ clearGrid.addEventListener("click", function() {
     })
 })
 
-colorChanger.addEventListener("input", function() {
-    spanElement.style.backgroundColor = colorChanger.value;
-})
+function borderColorChange() {
+    colorChanger.style.borderColor = colorChanger.value;
+}
+
+colorChanger.addEventListener("input", borderColorChange);
 
 rainbowButton.addEventListener("click", function() {
     if (rainbowMode === false) {
@@ -85,3 +87,4 @@ rainbowButton.addEventListener("click", function() {
 })
 
 window.onload = createSquare(16);
+window.onload = borderColorChange();

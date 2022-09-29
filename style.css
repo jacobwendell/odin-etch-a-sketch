@@ -36,6 +36,10 @@ h1 {
     display: grid;
 }
 
+#grid-holder:hover {
+    cursor: crosshair;
+}
+
 h2 {
     margin-bottom: -12px;
     font-family: 'Rubik Dirt', cursive;
